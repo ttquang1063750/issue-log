@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red38\green38\blue38;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid202\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid203\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17800\viewh13120\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\b\fs28 \cf0 \expnd0\expndtw0\kerning0
+Brief overview
+\b0\fs24  :\'a0\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+The app\'a0enables push notifications. The user has to confirm that he wishes to receive these notifications.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+The app receives a\'a0\'93device token\'94. You can think of the device token as the address that push notifications will be sent to.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+The app sends the\'a0device token to your server.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+When something of interest to your app happens, the server\'a0sends a push notification to the Apple Push Notification Service, or APNS for short.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+APNS sends the push notification to the user\'92s device.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\b\fs28 Anatomy of a push notification
+\b0\fs24  :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+alert => message\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+sound => play sound (default)\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+badge => display number of icon\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\b\fs28 Steps
+\b0\fs24  :\
+ - Generating the Certificate Signing Request :\'a0\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160
+\ls3\ilvl2\cf0 \expnd0\expndtw0\kerning0
+	- Request a Certificate from a Certificate Authority\'a0\'85 (Note: Common name) => create .certSigningRequest file\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160
+\ls3\ilvl2\cf0 \kerning1\expnd0\expndtw0 	- \expnd0\expndtw0\kerning0
+Export key same common name in previous step => Create .p12 file\
+\ls3\ilvl2\kerning1\expnd0\expndtw0 	- \expnd0\expndtw0\kerning0
+Sign in Apple account\
+\ls3\ilvl2\kerning1\expnd0\expndtw0 	- \expnd0\expndtw0\kerning0
+Create App IDs (App ID Description, App services : Check the push\'a0Notification, Explicate App ID : same bundle id of application). Click [Continue] and [Submit] buttons.\
+\ls3\ilvl2\kerning1\expnd0\expndtw0 	- \expnd0\expndtw0\kerning0
+After you have made the App ID, it shows up like this in the App IDs list. Select the newest created App ID from the list. Click [Setting] button to configure these settings.\
+\ls3\ilvl2\kerning1\expnd0\expndtw0 	- \expnd0\expndtw0\kerning0
+Scroll down to the Push Notifications section and select the [Create Certificate] button in the\'a0Development SSL Certificate section. Click [Continue] button. Next step you upload the CSR (.certSigningRequest file) and click [Generate] button. Waiting a few seconds and click [Continue] button. Click [Download] button => get\'a0\'93aps_development.cer\'94\
+\pard\pardeftab720\sl320
+\cf0 \expnd0\expndtw0\kerning0
+- Make a .pem\'a0file : (Must have the\'a0csr file, private key as a .p12 file and SSL certificate file -\'a0aps_development.cer)\
+	- Convert the .cer file into a .pem file : \
+		\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 $ openssl x509 -in < cer file > -inform der -out < pem file created from cer file>\
+	- Convert the private key\'92s .p12 file into a .pem file : \
+		\cf3 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  $ openssl pkcs12 -nocerts -out < pem file creates from .p12 file > -in < .p12 file >\
+	- Combine the certificate and key into a single .pem file\
+\cb1 		\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 $ cat < \cf3 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 pem file created from cer file \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 > < \cf3 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 pem file creates from .p12 file \cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 > > < new pem file >\
+	- Upload new pem file to your server\
+- Make provision file : \
+	- Click [Provision Profiles] button in the side bar and click [+] button.\
+	- Select \'93iOS App development\'94 option button and press [Continue] button\
+	- Choose app id created in the previous section. This will ensure that this provisioning profile is explicitly tied to the your app.\
+	- Select certificates and click [Continue] button\
+	- Select devices and click [Continue] button\
+	- Fill profile name and click [Generate] button\
+	- Finally click [Download] button and install new development provision profile.\
+- Basic App : \
+	- Create app with bundle id  name same App IDs created in previous section.\
+	- Register notification in didFinishLanchingWithOptions method.\
+	- Note didRegisterForRemoteNotificationsWithDeviceToken and didFailToRegisterForNotificationsWithError methods\
+}
