@@ -1,6 +1,7 @@
+#Issue
 If I have old [ipa] file and I can not install on your devices.  How can I install this file on my device ?\
 
-Step by step : 
+#How to fix :
 	- Download iResign.app
 	- Create file Info.plist has these <key : value> : 
 		+ [application-identifier] : [your identifier]
@@ -12,12 +13,12 @@ Step by step :
 		+ Fill path of old [ipa] file.
 		+ Fill path of mobile provision file.
 		+ Fill path of [Info.plist] file.
-		+ Fill application\'92s new bundle id (depend on your identifier).\
+		+ Fill application new bundle id (depend on your identifier).
 		+ Choose approximate apple account.
 		+ Choose [Change Id] option.
 		+ Press [ReSign!] button
 	- Use [your-app-name + resigned] ipa file to install on the device.
 
 
-Reference : 
-http://dev.mlsdigital.net/posts/how-to-resign-an-ios-app-from-external-developers/
+#Reference : 
+[Ref: http://dev.mlsdigital.net/posts/how-to-resign-an-ios-app-from-external-developers/](http://dev.mlsdigital.net/posts/how-to-resign-an-ios-app-from-external-developers/)
