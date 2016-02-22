@@ -2,7 +2,6 @@
 
 How to fix : 
 	- Open [Keychain Access] application.
-	- 
 	- On menu bar, choose [View] --> [Show Expired Certificates]
 	- On [login] keychains, delete expired certificates.
 	- On [System] keychains, delete expired version of the [Apple Worldwide Developer Relations Certificate Authority Intermediate] certificate (expired on February 2016)
